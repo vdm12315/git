@@ -12,11 +12,10 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 #设置白名单接口
-PortList=[22,80,443,843]
+PortList=[xxx]
 
-#设置收件人列表:多个需要用逗号隔开,如:['lidefu@lingyuwangluo.com','4153@qq.com','http@163.com']
-MailList=['lidefu@lingyuwangluo.com','caowanyun@lingyuwangluo.com','wangfuhou@lingyuwangluo.com']
-#MailList=['lidefu@lingyuwangluo.com']
+#设置收件人列表:多个需要用逗号隔开,如:['xxx@xxxx.com','4153@qq.com','http@163.com']
+MailList=['xxx@lxxxx.com']
 
 #定义个全局变量以接受scan1函数中的变量
 result = ''
@@ -89,13 +88,13 @@ def main():
   f.close()
 if __name__ == "__main__":
   main()
-  sender = 'lidefu@lingyuwangluo.com'
+  sender = 'xxx@xxxxx.com'
   receiver = MailList
   #邮件主题,如:大闹天宫端口扫描
   subject = '诸神端口扫描'
-  smtpserver = 'smtp.lingyuwangluo.com'
-  smtpuser = 'lidefu@lingyuwangluo.com'
-  smtppass = 'ldf12315187'
+  smtpserver = 'smtp.xxxx.com'
+  smtpuser = 'xxxx@xxxx.com'
+  smtppass = 'xxxx'
   #mailcontent = '<h1>共执行%s 台主机<h1><br>' % HostNum + '<h2>成功%s台<h2><br>' % CurNum + '<h2>失败%s台<h2><br>' % ErrorNum + '<h2>失败的ip为:%s<h2><br>' % ErrHostList + result 
   mailcontent = '<h1>共执行%s 台主机</h1>' % HostNum + '<h2>成功%s台</h2>' % CurNum + '<h2>失败%s台</h2>' % ErrorNum + '<h2>失败的ip为:%s</h2><hr>' % ErrHostList + result 
   #print mailcontent
